@@ -135,10 +135,8 @@ h1 .gold-ital{font-style:italic;font-weight:600;background:linear-gradient(120de
 .date-chip .dc b{font-family:var(--font-display);font-size:20px;color:var(--gold-bright);font-weight:600}
 .date-chip .sep{width:1px;height:34px;background:var(--line)}
 .price-line{display:flex;align-items:baseline;justify-content:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
-.price-old{font-size:20px;color:var(--ink-faint);text-decoration:line-through}
 .price-new{font-family:var(--font-display);font-size:clamp(40px,5vw,56px);font-weight:900;color:var(--gold-bright);line-height:1}
 .price-new sup{font-family:var(--font-body);font-size:.42em;font-weight:700;vertical-align:.9em;margin-right:2px}
-.price-tag{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--green);border:1px solid rgba(127,191,122,.35);padding:5px 13px;border-radius:100px}
 .btn-primary{
   display:inline-block;font-family:var(--font-body);font-weight:800;
   font-size:17px;letter-spacing:.6px;color:#0a0803;text-decoration:none;
@@ -301,67 +299,6 @@ h2 .gold{background:linear-gradient(120deg,var(--gold-bright),var(--gold-deep));
 .bene p{color:var(--ink-dim);font-size:16px;font-family:var(--font-mr)}
 .bene p b{color:var(--ink)}
 
-/* ---------- countdown / urgency ---------- */
-.urgency{
-  background:linear-gradient(160deg,#160f05,#0d0a04);
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-  text-align:center;
-}
-/* ---------- daily countdown (HOURS : MINUTES : SECONDS) ---------- */
-.cd-label{
-  display:block;font-size:11.5px;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;
-  color:var(--ink-faint);margin-bottom:14px;
-}
-.cd{display:inline-flex;align-items:center;justify-content:center;gap:10px;flex-wrap:nowrap}
-.cd-cell{
-  min-width:104px;border:1px solid var(--line);border-radius:16px;
-  background:linear-gradient(160deg,rgba(216,180,90,.09),rgba(216,180,90,.02));
-  padding:18px 12px 13px;text-align:center;position:relative;overflow:hidden;
-}
-.cd-cell::before{
-  content:"";position:absolute;top:0;left:20%;right:20%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-}
-.cd-cell b{
-  display:block;font-family:var(--font-display);font-weight:700;
-  font-size:clamp(32px,4.4vw,46px);color:var(--gold-bright);line-height:1;
-  font-variant-numeric:tabular-nums;letter-spacing:-1px;
-}
-.cd-cell span{
-  display:block;margin-top:7px;font-size:10.5px;letter-spacing:2.6px;
-  text-transform:uppercase;color:var(--ink-faint);font-weight:600;
-}
-.cd-sep{
-  font-family:var(--font-display);font-style:normal;font-weight:700;
-  font-size:clamp(24px,3vw,34px);color:var(--gold);line-height:1;
-  padding-bottom:16px;animation:blink 1s steps(1,end) infinite;
-}
-@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:.25}}
-
-/* mini variant — hero + sticky bar */
-.cd[data-size="mini"]{gap:7px}
-.cd[data-size="mini"] .cd-cell{min-width:66px;padding:10px 8px 8px;border-radius:12px}
-.cd[data-size="mini"] .cd-cell b{font-size:24px}
-.cd[data-size="mini"] .cd-cell span{font-size:8.5px;letter-spacing:1.6px;margin-top:4px}
-.cd[data-size="mini"] .cd-sep{font-size:19px;padding-bottom:10px}
-
-/* medium variant — pricing stack */
-.cd[data-size="md"] .cd-cell{min-width:88px;padding:15px 10px 11px}
-.cd[data-size="md"] .cd-cell b{font-size:clamp(28px,3.4vw,36px)}
-
-.cd-wrap{margin:38px 0 28px}
-.hero-timer{
-  margin:0 auto 30px;display:inline-block;text-align:center;
-  border:1px solid var(--line-soft);border-radius:20px;
-  background:rgba(13,13,18,.6);padding:20px 30px 22px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
-}
-.hero-timer .cd-label{color:var(--gold);margin-bottom:12px}
-.vs-timer{margin:4px 0 26px;text-align:center}
-.vs-timer .cd-label{color:var(--gold)}
-.sticky-cta .cd{display:none}
-@media(min-width:680px){.sticky-cta .cd{display:inline-flex}}
-.urgency .fee-note{font-family:var(--font-mr);color:var(--ink-dim);font-size:17px}
-.urgency .fee-note b{color:var(--red)}
 
 /* ---------- instructor ---------- */
 .mentor-grid{display:grid;grid-template-columns:.9fr 1.4fr;gap:60px;align-items:center;margin-top:40px}
@@ -611,8 +548,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
 
   /* price + buttons */
   .price-line{gap:10px;margin-bottom:24px}
-  .price-old{font-size:17px}
-  .price-tag{font-size:10.5px;letter-spacing:1.2px;padding:4px 10px}
   .btn-primary{padding:16px 26px;font-size:14.5px;letter-spacing:.3px;width:100%;max-width:340px}
   .btn-under{font-size:12.5px;margin-top:13px;line-height:1.6}
 
@@ -651,16 +586,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
   .keymsg-card .big-quote{font-size:19px;margin-top:26px}
 
   /* countdown */
-  .cd{display:flex;width:100%;max-width:340px;margin-left:auto;margin-right:auto;gap:5px}
-  .cd-cell{min-width:0;flex:1;padding:12px 4px 9px;border-radius:12px}
-  .cd-cell b{font-size:26px;letter-spacing:-.5px}
-  .cd-cell span{font-size:8px;letter-spacing:1px;margin-top:5px}
-  .cd-sep{font-size:17px;padding-bottom:13px}
-  .cd-label{font-size:10px;letter-spacing:2px;margin-bottom:11px}
-  .hero-timer{display:block;width:100%;max-width:340px;padding:15px 14px 17px;border-radius:16px}
-  .cd-wrap{margin:28px 0 22px}
-  .cd[data-size="md"] .cd-cell{min-width:0;padding:12px 4px 9px}
-  .cd[data-size="md"] .cd-cell b{font-size:26px}
 
   /* mentor */
   .mentor-visual{width:100%;max-width:290px}
@@ -690,7 +615,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
   .vs-price .now{font-size:16px}
   .vs-price .amount{font-size:38px;margin:4px 0 18px}
   .vs-price .amount s{font-size:.42em;vertical-align:7px;margin-right:9px}
-  .vs-timer{margin-bottom:22px}
 
   /* magic + faq */
   .magic blockquote{font-size:20px;line-height:1.5}
@@ -720,8 +644,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
   .logo em{font-size:7.6px;letter-spacing:1.3px}
   .nav-cta{padding:10px 13px;font-size:12.5px}
   h1.hero-title{font-size:26px}
-  .cd-cell b{font-size:23px}
-  .cd-cell span{font-size:7.5px}
   .stat b{font-size:18px}
   .stat span{font-size:8px}
   .btn-primary{font-size:13.5px;padding:15px 18px}
@@ -736,8 +658,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
 </style>
 </head>
 <body>
-
-<div class="ribbon">⚡ <b>Be Quick!</b> Last few spots for this batch are remaining! &nbsp;·&nbsp; Register before <b>2 August, 11 AM</b> to unlock bonuses worth <b>₹12,000</b></div>
 
 <nav>
   <div class="nav-in">
@@ -769,25 +689,11 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
     </div>
 
     <div class="price-line rv rv-d5">
-      <span class="price-old">₹2,000</span>
       <span class="price-new"><sup>₹</sup>9<span style="font-size:.35em;font-weight:600">/-</span></span>
-      <span class="price-tag">99% Off Today</span>
-    </div>
-
-    <div class="hero-timer rv rv-d5">
-      <span class="cd-label">Offer Ends In</span>
-      <div class="cd">
-        <div class="cd-cell"><b data-u="h">00</b><span>Hours</span></div>
-        <i class="cd-sep">:</i>
-        <div class="cd-cell"><b data-u="m">00</b><span>Minutes</span></div>
-        <i class="cd-sep">:</i>
-        <div class="cd-cell"><b data-u="s">00</b><span>Seconds</span></div>
-      </div>
     </div>
 
     <div class="rv rv-d5">
       <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE BOOTCAMP NOW →</a>
-      <span class="btn-under">Register before 2 August 2026 At 11 AM to unlock bonuses worth ₹12,000</span>
     </div>
 
     <div class="hero-video rv rv-d6">
@@ -909,7 +815,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
 
     <div class="date-banner rv">
       <b>Workshop is on 2 August 2026 At 11 AM</b>
-      <em>Be Quick! Last few spots for this batch are remaining!</em>
     </div>
   </div>
 </section>
@@ -935,7 +840,7 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
       <p>तुम्ही वरीलपैकी कोणतेही बॉक्स चेक केले असल्यास, तुम्हाला माझ्याकडून आमंत्रण आहे —</p>
       <h3>JOIN THE AI AND FB ADS BOOTCAMP</h3>
       <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE AI AND FB AD BOOTCAMP NOW !</a>
-      <span class="btn-under"><b>ONLY AT RS 9/-</b> · Register before 2 August 2026 At 11 AM to unlock bonuses worth ₹12,000</span>
+      <span class="btn-under"><b>ONLY AT RS 9/-</b></span>
     </div>
   </div>
 </section>
@@ -952,7 +857,7 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
       <div class="big-quote">"3 HOURS AI AND FB ADS BOOTCAMP"</div>
       <div class="cta-block">
         <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE AI AND FB AD BOOTCAMP NOW !</a>
-        <span class="btn-under"><b>ONLY AT RS 9/-</b> · Register before 2 August 2025 at 11 AM to unlock bonuses worth ₹12,000</span>
+        <span class="btn-under"><b>ONLY AT RS 9/-</b></span>
       </div>
     </div>
   </div>
@@ -972,27 +877,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
       <div class="bene rv rv-d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 2v20M17 6H9.5a3 3 0 000 6h5a3 3 0 010 6H6" stroke-linecap="round"/></svg></span><p>कोणताही अतिरिक्त खर्च न जोडता <b>तुमचा व्यवसाय महसूल 2X–3X</b> ने त्वरित वाढवा</p></div>
       <div class="bene rv"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3" stroke-linecap="round"/></svg></span><p>फनेल तयार करण्यासाठी आणि त्यांना प्रचंड शुल्क भरण्यासाठी <b>फ्रीलांसर / एजन्सीला नियुक्त करण्याची आवश्यकता नाही — त्याऐवजी ते AI वापरून AUTOMATE करा.</b></p></div>
       <div class="bene rv rv-d1"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 8V4m0 0h4m-4 0H8m4 12v4m0 0h4m-4 0H8M4 12h4m8 0h4" stroke-linecap="round"/><circle cx="12" cy="12" r="3"/></svg></span><p>तुमचे फनेल ऑपरेशन AUTOMATE करण्यासाठी आणि कंटाळवाण्या कामातून स्वतःला मुक्त करण्यासाठी <b>व्यावसायिक एआय टूल्सचा फायदा कसा घ्यावा ते शिका</b></p></div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= URGENCY / COUNTDOWN ================= -->
-<section class="urgency">
-  <div class="wrap">
-    <span class="eyebrow rv" style="margin-bottom:6px">Limited Seats</span>
-    <h2 class="sec-title rv rv-d1">Time is running out.<br><span class="gold">Reserve your seat now!</span></h2>
-    <div class="cd-wrap rv rv-d2">
-      <div class="cd">
-        <div class="cd-cell"><b data-u="h">00</b><span>Hours</span></div>
-        <i class="cd-sep">:</i>
-        <div class="cd-cell"><b data-u="m">00</b><span>Minutes</span></div>
-        <i class="cd-sep">:</i>
-        <div class="cd-cell"><b data-u="s">00</b><span>Seconds</span></div>
-      </div>
-    </div>
-    <p class="fee-note rv rv-d3">एकदा टाइमर <b>शून्यावर</b> आल्यानंतर फी वाढून <b>रु. 2,000 होईल.</b></p>
-    <div class="cta-block rv rv-d4">
-      <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">Reserve My Seat @ ₹9 →</a>
     </div>
   </div>
 </section>
@@ -1020,7 +904,6 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
         <p class="mentor-cta-line rv rv-d5">बूटकॅम्पमधे माझ्यासोबत सामील व्हा!</p>
         <div class="rv rv-d5" style="margin-top:18px">
           <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">Join Kiran's Bootcamp →</a>
-          <span class="btn-under">Register before 2 August 2026 At 11 AM to unlock bonuses worth ₹12,000</span>
         </div>
       </div>
     </div>
@@ -1067,22 +950,10 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
         <div class="vs-row"><span>🎁 VIP Group — Expert Ad Guidance</span><b>₹2,999</b></div>
         <div class="vs-row"><span>🎁 Ad Account Protection Checklist</span><b>₹3,999</b></div>
         <div class="vs-row total"><span>बोनसचे एकूण मूल्य</span><b>₹12,000</b></div>
-        <div class="vs-row"><span>सामान्य BOOTCAMP तिकिटाची किंमत</span><b><s style="color:var(--ink-faint)">₹2,000</s></b></div>
       </div>
       <div class="vs-price">
         <div class="now">आजच फक्त</div>
-        <div class="amount"><s>₹2,000</s>₹9 <span style="font-size:.35em;font-weight:600">मध्ये सामील व्हा</span></div>
-
-        <div class="vs-timer">
-          <span class="cd-label">Time is running out. Reserve your seat now!</span>
-          <div class="cd" data-size="md">
-            <div class="cd-cell"><b data-u="h">00</b><span>Hours</span></div>
-            <i class="cd-sep">:</i>
-            <div class="cd-cell"><b data-u="m">00</b><span>Minutes</span></div>
-            <i class="cd-sep">:</i>
-            <div class="cd-cell"><b data-u="s">00</b><span>Seconds</span></div>
-          </div>
-        </div>
+        <div class="amount">₹9 <span style="font-size:.35em;font-weight:600">मध्ये सामील व्हा</span></div>
 
         <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE AI AND FB AD BOOTCAMP NOW !</a>
       </div>
@@ -1096,7 +967,7 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
     <blockquote>"ही कार्यशाळा एखाद्या <span class="gold">मॅजिक शोसारखी</span> असणार आहे — जिथे मी माझ्या स्क्रीनवर काय करतो ते पाहून <span class="gold">तुम्ही थक्क व्हाल!</span>"</blockquote>
     <div class="cta-block rv rv-d2">
       <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE AI AND FB AD BOOTCAMP NOW !</a>
-      <span class="btn-under"><b style="color:var(--gold-bright)">ONLY AT RS 9/-</b> · Register before 2 August 2026 At 11 AM to unlock bonuses worth ₹12,000</span>
+      <span class="btn-under"><b style="color:var(--gold-bright)">ONLY AT RS 9/-</b></span>
     </div>
   </div>
 </section>
@@ -1144,14 +1015,7 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
 
 <!-- ================= STICKY CTA ================= -->
 <div class="sticky-cta" id="stickyCta">
-  <div class="sc-price"><s>₹2,000</s><b>₹9/-</b></div>
-  <div class="cd" data-size="mini">
-    <div class="cd-cell"><b data-u="h">00</b><span>Hrs</span></div>
-    <i class="cd-sep">:</i>
-    <div class="cd-cell"><b data-u="m">00</b><span>Min</span></div>
-    <i class="cd-sep">:</i>
-    <div class="cd-cell"><b data-u="s">00</b><span>Sec</span></div>
-  </div>
+  <div class="sc-price"><b>₹9/-</b></div>
   <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">Join Bootcamp Now →</a>
 </div>
 
@@ -1176,24 +1040,6 @@ function sweepReveal(){
 addEventListener('scroll', ()=>{ requestAnimationFrame(sweepReveal); }, {passive:true});
 addEventListener('resize', sweepReveal);
 addEventListener('load', sweepReveal);
-
-/* daily countdown — 23:59:59 se midnight tak, roz reset (same as original site) */
-(function(){
-  const H=document.querySelectorAll('[data-u="h"]'),
-        M=document.querySelectorAll('[data-u="m"]'),
-        S=document.querySelectorAll('[data-u="s"]');
-  const pad=n=>String(n).padStart(2,'0');
-  const set=(nodes,val)=>{const v=pad(val);nodes.forEach(n=>{if(n.textContent!==v)n.textContent=v;});};
-  function tick(){
-    const now=new Date();
-    const midnight=new Date(now.getFullYear(),now.getMonth(),now.getDate()+1,0,0,0);
-    const diff=Math.max(0,midnight-now);
-    set(H,Math.floor(diff/3600000));
-    set(M,Math.floor(diff/60000)%60);
-    set(S,Math.floor(diff/1000)%60);
-  }
-  tick(); setInterval(tick,1000);
-})();
 
 /* YouTube facade: click to load real player */
 document.querySelectorAll('.yt-facade').forEach(f=>{

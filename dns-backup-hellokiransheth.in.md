@@ -41,12 +41,44 @@ nameservers are switched**, otherwise the website and/or email will break.
 - **`gmcbootcampyt`** → GitHub Pages. This is the bootcamp page and is the only
   record added for this project.
 
-## Fix applied on 3 Aug 2026
+## Changes made on 3 Aug 2026
 
-`www` had been pointed at `mraadarshdubey.github.io`, which GitHub was not serving —
-`www.hellokiransheth.in` returned no response at all. Restored to `hellokiransheth.in`.
+1. **Removed four stray GitHub Pages `A` records** (`185.199.108–111.153`) that had been
+   added alongside the Hostinger `A` record. With five apex `A` records the domain was
+   round-robining — roughly four in five visitors were being sent to GitHub Pages instead
+   of the real site.
+2. **Repaired `www`.** It pointed at `mraadarshdubey.github.io`, which GitHub was not
+   serving, so `www.hellokiransheth.in` returned nothing at all. Restored to
+   `hellokiransheth.in`.
+3. **Added `gmcbootcampyt` CNAME** → `mraadarshdubey.github.io` for the bootcamp page.
+4. **Moved DNS to Cloudflare.** Nameservers are now `ivan.ns.cloudflare.com` /
+   `izabella.ns.cloudflare.com`. Cloudflare's automatic scan missed three records
+   (`gmcbootcampyt`, and `5daychallenge` A + AAAA) — these were re-added by hand from the
+   table above. Every record in that table was then verified present in Cloudflare.
+
+## Cloudflare settings
+
+- Proxied (orange): apex `A`/`AAAA` and `www` only.
+- DNS-only (grey): **all mail records** (MX, SPF, DMARC, the three DKIM CNAMEs,
+  `autodiscover`, `autoconfig`), plus `ftp`, `ai`, `5daychallenge` and `gmcbootcampyt`.
+  Proxying a DKIM or autodiscover record breaks mail, so these must stay grey.
+- SSL/TLS mode: **Full**. Always Use HTTPS: on.
+
+## Where /gmcbootcampyt/ is actually served from
+
+`hellokiransheth.in/gmcbootcampyt/` is served **directly by the Hostinger origin** — the
+file lives on the web host, and the response comes back from LiteSpeed. A Cloudflare
+Worker was built to proxy that path through to GitHub Pages, but once the file appeared
+on the origin the Worker became redundant, so **its routes were deleted** to avoid two
+competing copies of the page. The Worker script `gmcbootcamp-proxy` still exists in the
+Cloudflare account, unused, if that approach is ever wanted again.
+
+**To update the page, replace the file on Hostinger.** A `git push` alone will not change
+what this URL serves — that only updates the GitHub copy behind
+`gmcbootcampyt.hellokiransheth.in`.
 
 ## Restore
 
-If anything breaks, re-enter the table above in the DNS editor, or point the
-nameservers back to `ns1.dns-parking.com` / `ns2.dns-parking.com`.
+- To undo Cloudflare entirely: set the nameservers back to `ns1.dns-parking.com` /
+  `ns2.dns-parking.com` in hPanel. The original Hostinger zone is still intact there.
+- To rebuild the zone from scratch anywhere: re-enter the table above.
