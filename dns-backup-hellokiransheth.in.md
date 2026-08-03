@@ -64,18 +64,26 @@ nameservers are switched**, otherwise the website and/or email will break.
   Proxying a DKIM or autodiscover record breaks mail, so these must stay grey.
 - SSL/TLS mode: **Full**. Always Use HTTPS: on.
 
-## Where /gmcbootcampyt/ is actually served from
+## Where /gmcbootcampyt/ is served from
 
-`hellokiransheth.in/gmcbootcampyt/` is served **directly by the Hostinger origin** — the
-file lives on the web host, and the response comes back from LiteSpeed. A Cloudflare
-Worker was built to proxy that path through to GitHub Pages, but once the file appeared
-on the origin the Worker became redundant, so **its routes were deleted** to avoid two
-competing copies of the page. The Worker script `gmcbootcamp-proxy` still exists in the
-Cloudflare account, unused, if that approach is ever wanted again.
+A Cloudflare Worker named **`gmcbootcamp-proxy`** serves that path. It fetches
+`gmcbootcampyt.hellokiransheth.in` (GitHub Pages) and returns the response under the main
+domain, so visitors stay on `hellokiransheth.in`. Routes:
 
-**To update the page, replace the file on Hostinger.** A `git push` alone will not change
-what this URL serves — that only updates the GitHub copy behind
-`gmcbootcampyt.hellokiransheth.in`.
+```
+hellokiransheth.in/gmcbootcampyt
+hellokiransheth.in/gmcbootcampyt/*
+www.hellokiransheth.in/gmcbootcampyt
+www.hellokiransheth.in/gmcbootcampyt/*
+```
+
+**GitHub is the source of truth — `git push` publishes.** A copy of the page also sits on
+the Hostinger origin at the same path, but the Worker takes precedence, so that copy is
+never served and is safe to ignore or delete. Everything outside `/gmcbootcampyt` is
+untouched and still comes from the Hostinger origin.
+
+If the Worker is ever deleted, the Hostinger copy takes over automatically — but it will
+be whatever version was last uploaded there, not the current GitHub one.
 
 ## Restore
 
