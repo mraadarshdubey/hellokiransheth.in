@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Sunkiran Dimex</title>
+<meta name="description" content="Get in touch with Sunkiran Dimex — email, phone, WhatsApp, and registered office address.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07070a;--bg-2:#0d0d12;--bg-3:#12121a;
+  --ink:#f2ecdd;--ink-dim:#b9b2a0;--ink-faint:#7c766a;
+  --gold:#d8b45a;--gold-bright:#f0d488;--gold-deep:#9a7a2e;
+  --wa:#25d366;--wa-deep:#128c3e;
+  --line:rgba(216,180,90,.18);--line-soft:rgba(242,236,221,.08);
+  --font-display:"Fraunces",Georgia,serif;--font-body:"Mukta","Segoe UI",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16.5px;line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--gold-bright);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.topbar{border-bottom:1px solid var(--line-soft);background:rgba(7,7,10,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);position:sticky;top:0;z-index:20}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--gold)}
+.logo em{font-style:normal;display:block;font-family:var(--font-body);font-weight:400;font-size:9.5px;letter-spacing:3px;color:var(--ink-faint);text-transform:uppercase;margin-top:1px}
+.back{font-size:13px;color:var(--ink-dim);border:1px solid var(--line);border-radius:100px;padding:8px 16px}
+.back:hover{color:var(--gold-bright);text-decoration:none}
+.page-head{padding:60px 0 30px;text-align:center;position:relative;overflow:hidden}
+.page-head::before{content:"";position:absolute;top:-60%;left:50%;transform:translateX(-50%);width:760px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(216,180,90,.12),transparent 62%);pointer-events:none}
+.page-head .eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;position:relative}
+.page-head h1{font-family:var(--font-display);font-weight:900;font-size:clamp(34px,6vw,54px);line-height:1.1;letter-spacing:-.5px;position:relative;background:linear-gradient(120deg,#fff 25%,var(--gold-bright) 75%,var(--gold-deep));-webkit-background-clip:text;background-clip:text;color:transparent}
+.page-head p.lead{max-width:560px;margin:16px auto 0;color:var(--ink-dim);font-size:16.5px;position:relative}
+main{padding:20px 0 70px}
+
+.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
+.method{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;background:linear-gradient(160deg,var(--bg-3),var(--bg-2));border:1px solid var(--line-soft);border-radius:18px;padding:30px 20px;transition:border-color .3s,transform .3s}
+.method:hover{border-color:var(--line);transform:translateY(-3px);text-decoration:none}
+.method .ic{width:50px;height:50px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(216,180,90,.08);border:1px solid var(--line)}
+.method .ic svg{width:24px;height:24px;fill:var(--gold-bright)}
+.method .lbl{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ink-faint)}
+.method .val{font-family:var(--font-body);font-weight:700;font-size:16px;color:var(--ink);word-break:break-word}
+.method .val.gold{color:var(--gold-bright)}
+
+.info-card{background:linear-gradient(160deg,var(--bg-3),var(--bg-2));border:1px solid var(--line-soft);border-radius:18px;padding:32px 34px;margin-bottom:22px}
+.info-card h2{font-family:var(--font-display);font-weight:700;font-size:22px;color:var(--ink);margin-bottom:18px}
+.info-row{display:flex;gap:14px;padding:11px 0;border-top:1px solid var(--line-soft);font-size:15.5px}
+.info-row:first-of-type{border-top:none}
+.info-row .k{flex:0 0 150px;color:var(--ink-faint);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;padding-top:3px}
+.info-row .v{color:var(--ink-dim)}
+.info-row .v b{color:var(--ink)}
+
+.wa-cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;background:linear-gradient(135deg,var(--wa),var(--wa-deep));color:#04270f;font-weight:800;font-size:17px;padding:18px 28px;border-radius:14px;box-shadow:0 10px 34px rgba(37,211,102,.28);transition:transform .25s,box-shadow .25s}
+.wa-cta:hover{transform:translateY(-2px);text-decoration:none;box-shadow:0 16px 44px rgba(37,211,102,.4)}
+.wa-cta svg{width:26px;height:26px;fill:#04270f;flex:none}
+
+/* footer */
+footer{border-top:1px solid var(--line-soft);background:var(--bg-2);padding:52px 0 70px;margin-top:40px}
+footer .foot-logo{font-family:var(--font-display);font-weight:700;font-size:20px;margin-bottom:22px}
+footer .foot-logo span{color:var(--gold)}
+.foot-biz{max-width:980px;margin-bottom:22px}
+.foot-biz .biz-name{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--ink);margin-bottom:9px}
+.foot-biz .biz-name small{display:block;font-family:var(--font-body);font-weight:400;font-size:11px;letter-spacing:.3px;color:var(--ink-faint);margin-top:3px}
+.foot-biz .biz-row{font-size:12.6px;color:var(--ink-dim);line-height:1.85;margin-bottom:4px}
+.foot-biz .biz-row b{color:var(--ink);font-weight:600}
+.foot-biz a{color:var(--gold-bright)}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin:20px 0 22px}
+.foot-links a{font-size:12.6px;color:var(--gold-bright)}
+.foot-legal-note{font-size:11.6px;color:var(--ink-faint);line-height:1.75;max-width:980px;margin-bottom:14px;border-top:1px solid var(--line-soft);padding-top:18px}
+.foot-legal-note b{color:var(--ink-dim);font-weight:600}
+.foot-copy{font-size:11.6px;color:var(--ink-faint);margin-top:18px}
+
+@media(max-width:640px){
+  .method-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  body{font-size:15.5px}.wrap{padding:0 18px}
+  .info-card{padding:24px 20px}
+  .info-row{flex-direction:column;gap:2px}
+  .info-row .k{flex:none}
+  .topbar .logo em{display:none}.foot-links{gap:8px 16px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="logo" href="../">SUNKIRAN <span>DIMEX</span><em>Digital Marketing Agency</em></a>
+    <a class="back" href="../">← Home</a>
+  </div>
+</div>
+
+<header class="page-head">
+  <div class="wrap">
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Contact Us</h1>
+    <p class="lead">Have a question about our workshops, a payment, or your registration? Our support team is here to help.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="method-grid">
+      <a class="method" href="mailto:connect@sunkirandimex.com">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg></span>
+        <span class="lbl">Email</span>
+        <span class="val gold">connect@sunkirandimex.com</span>
+      </a>
+      <a class="method" href="tel:+917769017372">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1z"/></svg></span>
+        <span class="lbl">Call</span>
+        <span class="val gold">+91 77690 17372</span>
+      </a>
+      <a class="method" href="https://wa.me/917769017372" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg></span>
+        <span class="lbl">WhatsApp</span>
+        <span class="val gold">Chat with us</span>
+      </a>
+    </div>
+
+    <div class="info-card">
+      <h2>Business Details</h2>
+      <div class="info-row"><div class="k">Legal Name</div><div class="v"><b>Sunkiran Dimex</b> (Proprietorship)</div></div>
+      <div class="info-row"><div class="k">Proprietor</div><div class="v">Kiran Kantilal Hajare</div></div>
+      <div class="info-row"><div class="k">Registered Office</div><div class="v">Jaihari Housing Society, Nevale Wasti, Near Sane Chowk, Chikhali, Pimpri-Chinchwad, Maharashtra &ndash; 411062, India</div></div>
+      <div class="info-row"><div class="k">GSTIN</div><div class="v"><b>27AMBPH1424N1Z5</b></div></div>
+      <div class="info-row"><div class="k">Email</div><div class="v"><a href="mailto:connect@sunkirandimex.com">connect@sunkirandimex.com</a></div></div>
+      <div class="info-row"><div class="k">Phone / WhatsApp</div><div class="v"><a href="tel:+917769017372">+91 77690 17372</a></div></div>
+      <div class="info-row"><div class="k">Support Hours</div><div class="v">Monday &ndash; Saturday, 10:00 AM &ndash; 7:00 PM (IST)</div></div>
+    </div>
+
+    <a class="wa-cta" href="https://wa.me/917769017372" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      Message Us on WhatsApp
+    </a>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo">SUNKIRAN <span>DIMEX</span></div>
+    <div class="foot-biz">
+      <div class="biz-name">Sunkiran Dimex
+        <small>Proprietor: Kiran Kantilal Hajare &middot; A digital marketing agency &amp; training company</small>
+      </div>
+      <div class="biz-row"><b>Registered Address:</b> Jaihari Housing Society, Nevale Wasti, Near Sane Chowk, Chikhali, Pimpri-Chinchwad, Maharashtra &ndash; 411062, India</div>
+      <div class="biz-row"><b>GSTIN:</b> 27AMBPH1424N1Z5</div>
+      <div class="biz-row"><b>Email:</b> <a href="mailto:connect@sunkirandimex.com">connect@sunkirandimex.com</a></div>
+      <div class="biz-row"><b>Phone / WhatsApp:</b> <a href="tel:+917769017372">+91 77690 17372</a></div>
+    </div>
+    <nav class="foot-links" aria-label="Legal">
+      <a href="../privacy-policy/">Privacy Policy</a>
+      <a href="../terms/">Terms &amp; Conditions</a>
+      <a href="../refund-policy/">Refund &amp; Cancellation Policy</a>
+      <a href="../contact/">Contact Us</a>
+    </nav>
+    <p class="foot-legal-note"><b>Trademark &amp; Affiliation Disclaimer:</b> Meta, Facebook, and Instagram are registered trademarks of Meta Platforms, Inc. Google is a registered trademark of Google LLC. Sunkiran Dimex is an independent marketing agency and is not affiliated with, endorsed by, or sponsored by Meta Platforms, Inc. or Google LLC.</p>
+    <p class="foot-copy">&copy; 2020&ndash;2026 Sunkiran Dimex. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

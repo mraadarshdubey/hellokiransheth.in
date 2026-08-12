@@ -405,6 +405,28 @@ footer .foot-logo{font-family:var(--font-display);font-weight:700;font-size:22px
 footer .foot-logo span{color:var(--gold)}
 footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:16px;max-width:980px}
 
+/* business identity + legal block */
+.foot-biz{max-width:980px;margin-bottom:26px}
+.foot-biz .biz-name{font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--ink);margin-bottom:10px}
+.foot-biz .biz-name small{display:block;font-family:var(--font-body);font-weight:400;font-size:11px;letter-spacing:.3px;color:var(--ink-faint);margin-top:3px}
+.foot-biz .biz-row{font-size:12.6px;color:var(--ink-dim);line-height:1.85;margin-bottom:4px}
+.foot-biz .biz-row b{color:var(--ink);font-weight:600}
+.foot-biz a{color:var(--gold-bright);text-decoration:none}
+.foot-biz a:hover{text-decoration:underline}
+.foot-links{display:flex;flex-wrap:wrap;gap:8px 22px;margin:22px 0 26px}
+.foot-links a{font-size:12.6px;color:var(--gold-bright);text-decoration:none;position:relative}
+.foot-links a:hover{text-decoration:underline}
+.foot-legal-note{font-size:11.6px;color:var(--ink-faint);line-height:1.75;max-width:980px;margin-bottom:16px;border-top:1px solid var(--line-soft);padding-top:20px}
+.foot-copy{font-size:11.6px;color:var(--ink-faint);margin-top:22px}
+
+/* earnings / results disclaimer near offer */
+.offer-disclaimer{
+  max-width:820px;margin:22px auto 0;padding:14px 20px;
+  border:1px solid var(--line-soft);border-radius:12px;background:var(--bg-2);
+  font-family:var(--font-mr);font-size:12.5px;line-height:1.75;color:var(--ink-faint);text-align:left;
+}
+.offer-disclaimer b{color:var(--ink-dim);font-weight:600}
+
 /* ---------- sticky mobile CTA ---------- */
 .sticky-cta{
   position:fixed;bottom:0;left:0;right:0;z-index:60;
@@ -628,6 +650,8 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
   footer{padding:44px 0 110px}
   footer .foot-logo{font-size:19px;margin-bottom:18px}
   footer p{font-size:11.5px;line-height:1.75}
+  .foot-links{gap:8px 16px}
+  .offer-disclaimer{padding:12px 16px;font-size:11.8px}
 
   /* sticky bar */
   .sticky-cta{padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px}
@@ -695,6 +719,8 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
     <div class="rv rv-d5">
       <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE BOOTCAMP NOW →</a>
     </div>
+
+    <p class="offer-disclaimer rv rv-d6"><b>Earnings &amp; Results Disclaimer:</b> Results vary based on individual effort, business model, industry, and ad spend. Sunkiran Dimex does not guarantee specific sales, revenue, or customer acquisition outcomes. All testimonials or case studies shown are for illustrative purposes only.</p>
 
     <div class="hero-video rv rv-d6">
       <span class="vid-label"><span class="play-ic"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span><span>Watch This <b>1 Minute Short Video</b> First</span></span>
@@ -958,6 +984,8 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
         <a class="btn-primary" href="https://rzp.io/rzp/5PhoHEc" target="_blank" rel="noopener">JOIN THE AI AND FB AD BOOTCAMP NOW !</a>
       </div>
     </div>
+
+    <p class="offer-disclaimer"><b>Earnings &amp; Results Disclaimer:</b> Results vary based on individual effort, business model, industry, and ad spend. Sunkiran Dimex does not guarantee specific sales, revenue, or customer acquisition outcomes. All testimonials or case studies shown are for illustrative purposes only.</p>
   </div>
 </section>
 
@@ -1008,8 +1036,31 @@ footer p{font-size:12.8px;color:var(--ink-faint);line-height:1.8;margin-bottom:1
 <footer>
   <div class="wrap">
     <div class="foot-logo">FB <span>&amp;</span> AI BOOTCAMP</div>
-    <p>This site is not a part of the Facebook™ website or Facebook™ Inc. Additionally, This site is NOT endorsed by Facebook™ in any way. FACEBOOK™ is a trademark of FACEBOOK™, Inc. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with my ideas, information, tools or strategies. I just want to help you by giving great content, direction and strategies that worked well for me and my students and that I believe can help you move forward. All of my terms, privacy policies and disclaimers for this program and website can be accessed via the links. I feel transparency is important and I hold ourselves (you &amp; me) to a high standard of integrity. Thanks for stopping by. I hope this training and content brings you a lot of value &amp; results.</p>
+
+    <div class="foot-biz">
+      <div class="biz-name">Sunkiran Dimex
+        <small>Proprietor: Kiran Kantilal Hajare · A digital marketing agency &amp; training company</small>
+      </div>
+      <div class="biz-row"><b>Registered Address:</b> Jaihari Housing Society, Nevale Wasti, Near Sane Chowk, Chikhali, Pimpri-Chinchwad, Maharashtra – 411062, India</div>
+      <div class="biz-row"><b>GSTIN:</b> 27AMBPH1424N1Z5</div>
+      <div class="biz-row"><b>Email:</b> <a href="mailto:connect@sunkirandimex.com">connect@sunkirandimex.com</a></div>
+      <div class="biz-row"><b>Phone / WhatsApp:</b> <a href="tel:+917769017372">+91 77690 17372</a></div>
+    </div>
+
+    <nav class="foot-links" aria-label="Legal">
+      <a href="gmcbootcampyt/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="gmcbootcampyt/terms/" target="_blank" rel="noopener">Terms &amp; Conditions</a>
+      <a href="gmcbootcampyt/refund-policy/" target="_blank" rel="noopener">Refund &amp; Cancellation Policy</a>
+      <a href="gmcbootcampyt/contact/" target="_blank" rel="noopener">Contact Us</a>
+    </nav>
+
+    <p class="foot-legal-note"><b>Trademark &amp; Affiliation Disclaimer:</b> Meta, Facebook, and Instagram are registered trademarks of Meta Platforms, Inc. Google is a registered trademark of Google LLC. Sunkiran Dimex is an independent marketing agency and is not affiliated with, endorsed by, or sponsored by Meta Platforms, Inc. or Google LLC. This site is not a part of the Facebook™ website or Facebook™ Inc., and is NOT endorsed by Facebook™ in any way.</p>
+
+    <p class="foot-legal-note" style="border-top:none;padding-top:0"><b>Earnings &amp; Results Disclaimer:</b> Results vary based on individual effort, business model, industry, and ad spend. Sunkiran Dimex does not guarantee specific sales, revenue, or customer acquisition outcomes. All testimonials or case studies shown are for illustrative purposes only. As stipulated by law, we can not and do not make any guarantees about your ability to get results or earn any money with our ideas, information, tools or strategies.</p>
+
     <p>Sunkiran Dimex is a sales and marketing education and training company. We do not sell a business opportunity, "get rich quick" program or money-making system. We believe, with education, businesses and individuals can be better prepared to make marketing and business decisions, but we do not guarantee success in our services. We do not make earnings claims, efforts claims, or claims that our training will make you any money. All material is intellectual property and protected by copyright. Any duplication, reproduction, or distribution is strictly prohibited. Investing of any kind carries risk and it is possible to lose some or all of your money. The training provided is general in nature, and some strategies may not be appropriate for all individuals or all situations. We do not measure earnings or financial performance. Instead, we track completed transactions and satisfaction of services by voluntary surveys. Results show that most clients who actively participate with Sunkiran Dimex have a greater chance of success than those who are not cooperative and involved. You should not, however, equate completed sales closing transactions with financially successful transactions. Further, many customers do not continue with the program, do not apply the strategies taught or what they learn, or do attempt to apply what they learn but nonetheless have difficulty in making sales successful for them. The Company may link to content or refer to content and/or services created by or provided by third parties that are not affiliated with the Company. The Company is not responsible for such content and does not endorse or approve it. The Company may provide services by or refer you to third-party businesses. Some of these businesses have common interest and ownership with the Company.</p>
+
+    <p class="foot-copy">© 2020–2026 Sunkiran Dimex. All rights reserved.</p>
   </div>
 </footer>
 
